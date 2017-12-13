@@ -1,5 +1,5 @@
 # Kubernetes StatefulSet Example
-An example of a Kubernetes stageful set
+An example of a Kubernetes StatefulSet
 
 ## Mounting persistent volumes on minikube
 
