@@ -24,3 +24,14 @@ Hello from Kubernetes storage 1
 $ `kubectl exec -it $(kubectl get pods -o jsonpath='{.items[*].metadata.name}' -l app=sleep) -c sleep -- curl web-1.nginx`
 
 Hello from Kubernetes storage 2
+
+## Additional queries
+* Check persistent volumes
+
+$ `kubectl get persistentvolume`
+```
+NAME          CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM               STORAGECLASS       REASON    AGE
+www-volume1   10Mi       RWO           Retain          Bound     default/www-web-0   my-storage-class             41s
+www-volume2   10Mi       RWO           Retain          Bound     default/www-web-1   my-storage-class             34s
+```
+
