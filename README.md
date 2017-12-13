@@ -27,11 +27,17 @@ Hello from Kubernetes storage 2
 
 ## Additional queries
 * Check persistent volumes
-
-$ `kubectl get persistentvolume`
 ```
+$ kubectl get persistentvolume
 NAME          CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM               STORAGECLASS       REASON    AGE
 www-volume1   10Mi       RWO           Retain          Bound     default/www-web-0   my-storage-class             41s
 www-volume2   10Mi       RWO           Retain          Bound     default/www-web-1   my-storage-class             34s
 ```
+* Check persistent volume claims
+```
+$ kubectl get persistentvolumeclaim
+NAME        STATUS    VOLUME        CAPACITY   ACCESSMODES   STORAGECLASS       AGE
+www-web-0   Bound     www-volume1   10Mi       RWO           my-storage-class   2m
+www-web-1   Bound     www-volume2   10Mi       RWO           my-storage-class   2m
 
+```
