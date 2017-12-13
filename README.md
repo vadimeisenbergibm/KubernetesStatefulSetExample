@@ -26,6 +26,17 @@ $ `kubectl exec -it $(kubectl get pods -o jsonpath='{.items[*].metadata.name}' -
 Hello from Kubernetes storage 2
 
 ## Additional queries
+* Check pods
+```
+
+```
+* Check stateful sets
+```
+$ kubectl get statefulset
+NAME      DESIRED   CURRENT   AGE
+web       2         2         4m
+
+```
 * Check persistent volumes
 ```
 $ kubectl get persistentvolume
