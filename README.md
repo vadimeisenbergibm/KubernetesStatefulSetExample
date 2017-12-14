@@ -28,7 +28,11 @@ Hello from Kubernetes storage 2
 ## Additional queries
 * Check pods
 ```
-
+$ kubectl get pods
+NAME                     READY     STATUS    RESTARTS   AGE
+sleep-6bc775c9c5-9hrdn   1/1       Running   0          6h
+web-0                    1/1       Running   0          2m
+web-1                    1/1       Running   0          2m
 ```
 * Check stateful sets
 ```
